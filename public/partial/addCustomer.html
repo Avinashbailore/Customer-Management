@@ -1,0 +1,142 @@
+<style type="text/css">
+
+    .form-control 
+    {
+        
+    }
+    .form-group 
+    {
+        font-size: 1.4em;
+    }
+    #nameEdit 
+    {
+        display: none;
+    }
+    #headEdit 
+    {
+        display: none;
+    }
+    #headAdd 
+    {
+        display: inline;
+    }
+    #cardViewTab 
+    {
+        background: #E6E6E6;
+    }
+    #login 
+    {
+        display: none;
+    }
+    #logout 
+    {
+        display: inline;
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+</style>
+<div class="container">
+    <div class="edit-icon">
+        <h1><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>&nbsp;Add Customer</h1>
+    </div>
+
+    <form class="form-horizontal" name="formdata"><!-- add customer form -->
+        <div class="form-group">
+            <label for="firstName" class="col-md-2">First Name:</label>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="inp" name="firstName" ng-model="cust.fname" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="firstName" class="col-md-2">Last Name:</label>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="inp" name="lastName" ng-model="cust.lname" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="gender" class="col-md-2">Gender:</label>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <input type="radio" name="Gender" value="female" ng-model="cust.gender">Female
+                <br>
+                <input type="radio" name="Gender" value="male" ng-model="cust.gender">Male
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email" class="col-md-2">Email:</label>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="inp" name="email" ng-model="cust.email">
+            </div>
+            <span ng-if="flag2" style="color:red"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="address" class="col-md-2">Address:</label>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="inp" name="address" ng-model="cust.address">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="state" class="col-md-2">State:</label>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <select class="form-control" id="inp" ng-model="cust.state">
+                    <option>Andhra Pradesh</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Bihar</option>
+                    <option>Assam</option>
+                    <option>Maharashtra</option>
+                    <option>Goa</option>
+                    <option>Karnataka</option>
+                    <option>Orissa</option>
+                    <option>Punjab</option>
+                    <option>Tamil Nadu</option>
+                    <option>Telangana</option>
+                    <option>Kerala</option>
+                    <option>Gujarat</option>
+                    <option>Uttarakhand</option>
+                    <option>Uttar Pradesh</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="city" class="col-md-2">City:</label>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="inp" name="city" ng-model="cust.city">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="city" class="col-md-2">Zip:</label>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="inp" name="zip" ng-model="cust.zip">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-5">
+                <button type="button" class="btn btn-info" style="font-weight:bold;" ng-click="addCustomer()" ng-disabled="formdata.$invalid">ADD</button>
+                <button type="button" class="btn btn-danger" style="font-weight:bold;" ng-click="cancel()">CANCEL</button>
+            </div>
+        </div>
+    </form><!-- end of addCustomer form -->
+</div>

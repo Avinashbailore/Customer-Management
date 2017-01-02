@@ -1,0 +1,87 @@
+<style type="text/css">/*overrided css*/
+    a:nth-child(3)
+    {
+        background: white;
+        color: black;
+        font-weight: bold;
+    }
+    #login 
+    {
+        display: none;
+    }
+    #logout 
+    {
+        display: inline;
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+    button 
+    {
+        background-color: #027ff4;
+        border: 1px solid #027ff4;
+    }
+    table 
+    {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    td,th 
+    {
+        text-align: left;
+        padding: 8px;
+    }
+    th 
+    {
+        background-color: #027ff4;
+    }
+    tr:nth-child(even) 
+    {
+        background-color: #dddddd;
+    }
+    #listViewTab 
+    {
+        background: #E6E6E6;
+    }
+    
+</style><!-- end of css -->
+
+<div class="container-fluid">
+    <div class="center-block ng-scope"><!-- cardView and listView buttons -->
+        <p><span class="glyphicon glyphicon-user"></span>Customers</p>
+        <div class="optionView">
+            <a href="#/cardView">
+                <button type="button" class="btn btn-default" id="cardViewTab"><span class="glyphicon glyphicon-th-large"></span>Card View</button>
+            </a>
+            <a href="#/listView">
+                <button type="button" class="btn btn-default" id="listViewTab"><span class="glyphicon glyphicon-list"></span>List View</button>
+            </a>
+            <a href="#/addCustomer">
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span>Add Customer</button>
+            </a>
+            <div class="input">Filter:
+                <input type="text" class="form-control filter ng-valid ng-dirty ng-valid-parse ng-touched" placeholder="Name And Address" ng-model="search">
+            </div><!-- end of buttons division -->
+        </div>
+    </div>
+    <div>
+        <table class="table">
+            <th></th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Orders</th>
+            <th></th>
+            <tr ng-repeat="x in DataCust | filter : search"><!-- iterating through DataCust array using ng-repeat -->
+                <td><img src="../images/male.png"></td>
+                <td ng-click="edits(x._id)" id="names">{{x.firstname}} {{x.lastname}}</td>
+                <td id="names">{{x.city}},{{x.state}}</td>
+                <td>
+                    <div id="orders"><a href="#/myOrders/{{x.firstname}}/{{x.lastname}}/{{x.city}}/{{x.state}}">{{x.orders}}:orders</a></div>
+                </td>
+                <td>
+                    <button class="btn btn-danger" id="deleteButton" ng-click="removeData(x._id)">Delete</button>
+                </td>
+            </tr><!-- end of details of customer -->
+        </table>
+    </div>
+</div>

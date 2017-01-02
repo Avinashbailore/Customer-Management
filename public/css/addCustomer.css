@@ -1,0 +1,66 @@
+*{
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+}
+
+/* Nav bar*/
+.btn{
+  text-align: center;
+  margin-top: 5px;
+  color: white;
+}
+
+#navBar{
+	padding-left: 120px;
+	background-color: rgb(2,127,244);
+	margin-left: 0px;
+}
+
+#navBar a{
+	width:15%;
+	font-weight: bold;
+}
+
+#navBar a:hover{
+	background-color: white;
+	color: black;    
+}
+
+#btnHov:active{
+	background-color: yellow;
+	color: black;    
+}
+
+
+
+
+/*Login*/
+
+.container{
+		margin: 0px;
+}
+	
+#inp{
+		border-left: 5px solid green;
+}
+
+
+   .form-control {
+        border-left: 5px solid green;
+    }
+    .form-group {
+        font-size: 1.4em;
+    }
+    #nameEdit {
+        display: none;
+    }
+    #headEdit {
+        display: none;
+    }
+    #headAdd {
+        display: inline;
+    } 
+    
+    
+

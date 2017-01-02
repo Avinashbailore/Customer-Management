@@ -1,0 +1,185 @@
+ button {
+        border-radius: 2px;
+    }
+    
+    .navbar-brand img {
+        margin: -13px;
+    }
+    
+    .navbar-header .btn-link {
+        color: #fff;
+        margin: 10px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    .navbar-header .navbar-brand {
+        color: #fff;
+    }
+    
+    .navbar-header .btn-link:active {
+        color: #8f8c8c;
+        background-color: #fff;
+    }
+    
+    .center-block p {
+        top: 10px;
+        font-size: 25px;
+        margin: 15px;
+    }
+    
+    .center-block .btn-default {
+        border: transparent;
+        font-weight: bold;
+    }
+    
+    .input {
+        float: right;
+        font-weight: bold;
+        margin-right: 40px;
+    }
+    
+    .filter {
+        display: inline;
+        width: auto;
+    }
+    
+    .content .icon {
+        font-size: 25px;
+        margin: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .creaters {
+        display: block;
+    }
+    
+    #para {
+        margin: 15px;
+    }
+    
+    #individual {
+        display: inline-block;
+        margin: 15px;
+        width: 20%;
+        border: 1px solid black;
+    }
+    
+    #intro {
+        background-color: #027ff4;
+        color: white;
+        font-weight: bold;
+        padding: 5px;
+    }
+    
+    #intro button {
+        background-color: transparent;
+        border: 0;
+    }
+    
+    #custInfo {
+        display: inline-block;
+    }
+    
+    #name,
+    #deleteCust,
+    #custInfo>button,
+    #titlebar {
+        display: none;
+    }
+    
+    #deleteHand {
+        cursor: pointer;
+    }
+    
+    #customerTab {
+        background-color: white;
+        border-radius: 4px;
+        color: black;
+    }
+    
+    
+    .disabledClass>a {
+        opacity: 0.3;
+    }
+    
+    .selectedPage>a {
+        background-color: #027ff4 !important;
+        color: white !important;
+    }
+    
+    #eachIndividual {
+        float: left;
+        margin-right: 5px;
+    }
+    
+    #city,
+    #state {
+        display: inline;
+    }
+
+    #flname
+    {
+        float: left;
+    }
+    .glyphicon 
+    {
+        float: left;
+
+    }
+
+    .glyphicon:hover
+    {
+        cursor: pointer;
+    }
+
+    #cardsData
+    {
+        clear: both;
+    }
+
+    #blues
+    {
+        background-color: #027ff4;
+       height: 25px;
+       color: white;
+       padding: 1px 4px;
+    }
+    button
+    {
+        background-color: #027ff4;
+        border:1px solid #027ff4;
+    }
+
+    #Removes
+    {   
+        float: right;
+        margin-top: 5px;
+    }
+
+    #flname a
+    {
+        color: white;
+    }
+
+    .optionView
+    {
+        margin-bottom: 10px;
+    }
+
+    #flname:hover
+    {
+        cursor: pointer;
+    }
+
+    #custInfo
+    {
+        float: left;
+        display: inline;
+        margin-left: 7px;
+    }
+
+    #displayPic
+    {
+        float: left;
+    }

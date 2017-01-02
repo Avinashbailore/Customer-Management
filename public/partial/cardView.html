@@ -1,0 +1,61 @@
+<style type="text/css">
+    a:nth-child(3) {
+        background: white;
+        color: black;
+        font-weight: bold;
+    }
+    
+    #login 
+    {
+        display: none;
+    }
+    
+    #logout 
+    {
+        display: inline;
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+    
+    #cardViewTab 
+    {
+        background: #E6E6E6;
+    }
+</style>
+
+<div class="container-fluid">
+
+    <div class="center-block ng-scope">
+        <p><span class="glyphicon glyphicon-user"></span>Customers</p>
+        <div class="optionView"><!-- cardView and listView buttons -->
+            <a href="#/customers/cardView"><button type="button" class="btn btn-default" id="cardViewTab"><span class="glyphicon glyphicon-th-large"></span>Card View</button></a>
+            <a href="#/listView"><button type="button" class="btn btn-default" id="listViewTab"><span class="glyphicon glyphicon-list"></span>List View</button></a>
+            <a href="#/addCustomer"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span>Add Customer</button></a>
+            <div class="input">Filter: <input type="text" class="form-control filter ng-valid ng-dirty ng-valid-parse ng-touched" placeholder="Name And Address" ng-model="search"></div>
+        </div><!-- end of buttons division -->
+    </div>
+
+    <div style="margin:10px; margin-bottom:0;" class="ng-scope">
+        <!-- iterating through DataCust array using ng-repeat -->
+        <div id="individual" ng-repeat="x in DataCust | filter : search" ng-class-odd="'odd'" class="ng-scope odd">
+            <div id="blues"><!-- header of customer data -->
+                <div id="flname"><span ng-click="edits(x._id,x.firstname,x.lastname,x.orders)">{{x.firstname}} {{x.lastname}}</span></div>
+                <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="removeData(x._id)" id="Removes"></span>
+            
+            </div><!-- end of header -->
+            <div id="cardsData"><!-- details of customer -->
+                <div id="displayPic">
+                    <img ng-src="images/male.png" src="images/male.png">
+                </div>
+                <div id="custInfo">
+
+                    <div id="address">{{x.city}},{{x.state}}</div>
+                    <div id="orders"><a href="#/myOrders/{{x.firstname}}/{{x.lastname}}/{{x.city}}/{{x.state}}">{{x.orders}}:orders</a></div>
+                    <div id="deleteCust"><button type="button" class="btn btn-danger">Delete</button></div>
+                </div>
+            </div><!-- end of details of customer -->
+        </div><!-- end of ng-repeat division -->
+    </div>
+</div>
+
+        

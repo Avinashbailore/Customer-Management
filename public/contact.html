@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MFRP</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+</head>
+<body ng-app="myApp">
+    <h1>Hai therwe</h1>
+    <!-- Input<input type="text" ng-model="test">
+    {{test}} -->
+    <div class="container" ng-controller="myCtrl">
+      <table class="table">
+      <thead>
+       <tr>
+        <th>Nme</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>Action</th>
+        <th>Change</th>
+       </tr>
+       </thead>
+       <tbody>
+          <tr>
+            <td><input class="form-control" type="text" ng-model="contact.name"></td>
+            <td><input class="form-control" type="text" ng-model="contact.email"></td>
+            <td><input class="form-control" type="text" ng-model="contact.phone"></td>
+            <td><button class="btn btn-primary" ng-click="addContact()">AddContact</button></td>
+            <td><button class="btn btn-info" ng-click="update()">Update</button></td>
+          </tr>
+          <tr ng-repeat="x in contactList">
+            <td>{{x.name}}</td>
+            <td>{{x.email}}</td>
+            <td>{{x.phone}}</td>
+            <td><button class="btn btn-danger" ng-click="remove(x._id)">Remove</button></td>
+            <td><button class="btn btn-warning" ng-click="edit(x._id)">Edit</button></td>
+          </tr>
+         
+       </tbody>
+      </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="controllers/controller.js"></script>
+</body>
+</html>

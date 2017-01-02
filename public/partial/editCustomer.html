@@ -1,0 +1,141 @@
+<style type="text/css">/*overrided css*/
+    .form-control {
+        
+    }
+    .form-group {
+        font-size: 1.4em;
+    }
+    #nameEdit {
+        display: none;
+    }
+    #headEdit {
+        display: none;
+    }
+    #headAdd {
+        display: inline;
+    }
+    #cardViewTab {
+        background: #E6E6E6;
+    }
+    #login {
+        display: none;
+    }
+    #logout {
+        display: inline;
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+    #myName
+    {
+    	font-size: 20px;
+    	margin-bottom: 10px;
+    	margin-top: 5px;
+    }
+</style><!-- end of CSS -->
+
+<div class="container">
+    <div class="edit-icon">
+        <h1><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>&nbsp;Edit &nbsp;Customer</h1>
+    </div>
+    <!-- edit customer form -->
+    <div id="myName">{{fname}} {{lname}} (<a href="#/editCustomer/orders/{{edit.firstname}}/{{edit.lastname}}/{{edit.city}}/{{edit.state}}">View Orders</a>)</div>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="firstName" class="col-md-2">First Name:</label>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="inp" name="firstName" ng-model="edit.firstname">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="firstName" class="col-md-2">Last Name:</label>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="inp" name="lastName" ng-model="edit.lastname">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="gender" class="col-md-2">Gender:</label>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <input type="radio" name="Gender" value="female" ng-model="edit.gender">Female
+                <br>
+                <input type="radio" name="Gender" value="male" ng-model="edit.gender">Male
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email" class="col-md-2">Email:</label>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="inp" name="email" ng-model="edit.email">
+            </div>
+            <span ng-if="flag2" style="color:red"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="address" class="col-md-2">Address:</label>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="inp" name="address" ng-model="edit.address">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="state" class="col-md-2">State:</label>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <select class="form-control" id="inp" ng-model="edit.state">
+                    <option>Andhra Pradesh</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Bihar</option>
+                    <option>Assam</option>
+                    <option>Maharashtra</option>
+                    <option>Goa</option>
+                    <option>Karnataka</option>
+                    <option>Orissa</option>
+                    <option>Punjab</option>
+                    <option>Tamil Nadu</option>
+                    <option>Telangana</option>
+                    <option>Kerala</option>
+                    <option>Gujarat</option>
+                    <option>Uttarakhand</option>
+                    <option>Uttar Pradesh</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="city" class="col-md-2">City:</label>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="inp" name="city" ng-model="edit.city">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="city" class="col-md-2">Zip:</label>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="inp" name="zip" ng-model="edit.zip">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-5">
+                <button type="button" class="btn btn-info" style="font-weight:bold;" ng-click="updateCustomer()">Update</button>
+                <button type="button" class="btn btn-danger" style="font-weight:bold;" ng-click="deleteCustomer()">Delete</button>
+            </div>
+        </div>
+    </form><!-- end of edit customer form -->
+</div>

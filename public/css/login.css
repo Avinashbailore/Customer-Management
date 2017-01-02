@@ -1,0 +1,74 @@
+*{
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+}
+
+/* Nav bar*/
+.btn{
+  text-align: center;
+  margin-top: 5px;
+  color: white;
+}
+
+#navBar{
+	padding-left: 120px;
+	background-color: rgb(2,127,244);
+	margin-left: 0px;
+}
+
+#navBar a{
+	
+	font-weight: bold;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+#navBar a:hover{
+	background-color: white;
+	color: black;    
+}
+
+#btnHov:active{
+	background-color: yellow;
+	color: black;    
+}
+
+#navBar a:nth-child(6) {
+    background: white;
+    color: black;
+    font-weight: bold;
+}
+
+
+/*Login*/
+.lock-icon{
+		display: inline-flex;
+		margin: 10px 0px;
+}
+	
+.lock-icon h1{
+ 		margin: 0px;
+}
+
+.container{
+		margin: 0px;
+}
+	
+#inputEmail3 ,#inputPassword3{
+		
+}
+
+
+
+#navBar a.btnHov:hover, a.btnHov:active{
+	background: red;
+}*/
+
+
+
+#login {
+	display: inline;
+
+
+}
